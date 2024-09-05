@@ -1,5 +1,5 @@
 
-Los métodos de separación de fuentes se utilizan para aislar o extraer señales de interés de un conjunto de señales capturadas por múltiples micrófonos. Estos métodos son útiles en aplicaciones de procesamiento de señales, como la eliminación de ruido en grabaciones de audio, la mejora de la calidad de las señales en sistemas de comunicación, y en dispositivos de reconocimiento de voz. A continuación, te explico algunos de los métodos más comunes:
+
 
 1. Análisis de Componentes Independientes (ICA)
 El Análisis de Componentes Independientes (ICA) es una técnica estadística utilizada para separar una señal multivariable en componentes independientes entre sí. En el contexto de audio, ICA se usa para descomponer las señales capturadas por los micrófonos en varias señales independientes, permitiendo así la separación de las fuentes de sonido.
