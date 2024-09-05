@@ -123,3 +123,49 @@ Conclusión sobre la Calidad del Resultado en Términos de SNR
 Evaluación Visual: La imagen te permite hacer una evaluación visual preliminar del SNR comparando las formas de onda y los espectros de frecuencia. Los audios con formas de onda más regulares y espectros con picos definidos y poca energía dispersa tendrán un SNR más alto.
 Calidad del Resultado: El SNR final de cada audio determinará su calidad. Un SNR alto es ideal para la mayoría de las aplicaciones de audio, ya que indica menos ruido y una señal más clara. Un SNR bajo podría requerir mejoras adicionales, como filtrado de ruido o ajustes en la captura de audio.
 
+
+Principios de Separación de Fuentes de Sonido
+Análisis de Componentes Independientes (ICA): Este es uno de los métodos más comunes. Utiliza algoritmos matemáticos para identificar y separar señales independientes en una mezcla. Sin embargo, la eficacia de ICA disminuye cuando el audio es ruidoso o las señales no son claramente independientes.
+
+Métodos Basados en Deep Learning: Las redes neuronales profundas se han vuelto prominentes en la separación de fuentes. Se entrenan modelos utilizando grandes cantidades de datos etiquetados para aprender patrones específicos asociados a diferentes tipos de fuentes de sonido. Los modelos más avanzados, como las redes generativas adversarias (GANs), han demostrado un rendimiento notable incluso en condiciones de ruido.
+
+Espectrogramas y Máscaras de Tiempo-Frecuencia: La representación en el dominio del tiempo-frecuencia del audio (como un espectrograma) permite identificar características únicas de diferentes fuentes. Las técnicas de separación aplican máscaras que filtran las frecuencias y tiempos asociados con cada fuente específica.
+
+Argumentación y Evaluación de Resultados
+Cuando los resultados de la separación de fuentes se discuten, se consideran varios criterios:
+
+Calidad del Audio Separado: Se mide por el nivel de distorsión y la cantidad de "artefactos" no deseados introducidos por el proceso de separación. Incluso si el audio no es nítido, los resultados pueden ser analizados en términos de inteligibilidad o fidelidad al sonido original.
+
+Objetividad de los Métodos de Evaluación: Se utilizan métricas cuantitativas como la relación señal a interferencia (SIR), la relación señal a distorsión (SDR) y la relación señal a artefacto (SAR) para evaluar el rendimiento de los algoritmos de separación. Estas métricas proporcionan una manera estandarizada de comparar diferentes enfoques.
+
+Discusión Crítica: En artículos científicos y estudios técnicos, se suele discutir las ventajas y limitaciones de cada enfoque. Por ejemplo, algunos métodos pueden ser más efectivos en condiciones de grabación controladas, mientras que otros pueden manejar mejor las situaciones del mundo real con ruido de fondo.
+
+![sss](https://github.com/user-attachments/assets/cb05a8f0-04e4-4e37-99c1-db6e2ce34b03)
+
+Descripción del Gráfico
+Ejes: El gráfico es tridimensional, con los ejes etiquetados como X, Y y Z, representando coordenadas en el espacio.
+
+Puntos Representados:
+
+Fuentes: Los puntos rojos representan las "Fuentes" de sonido, etiquetadas como "Fuente 1", "Fuente 2", y "Fuente 3".
+Micrófonos: Los puntos azules representan los "Micrófonos", etiquetados como "Micrófono 1", "Micrófono 2", y "Micrófono 3".
+Distribución:
+
+Las fuentes y los micrófonos están distribuidos en distintas posiciones en el espacio tridimensional.
+Por ejemplo:
+"Fuente 1" está ubicada cerca del origen, aproximadamente en (-3, -2, 0).
+"Fuente 2" se encuentra en (0, 2, 2).
+"Fuente 3" está en (-4, -3, 1).
+Los micrófonos tienen diferentes posiciones, por ejemplo, "Micrófono 1" está en (-2, -1, 0), "Micrófono 2" cerca de (0, 2, 0), y "Micrófono 3" alrededor de (2, 1, 0.5).
+Análisis de la Configuración
+Posición Relativa de Fuentes y Micrófonos:
+
+La distribución espacial de las fuentes y los micrófonos sugiere un escenario de prueba para la separación de fuentes de sonido.
+La disposición no es simétrica, lo que puede ayudar a aumentar la robustez de los algoritmos de separación de fuentes al proporcionar datos con múltiples ángulos de recepción de las señales de sonido.
+Utilidad para la Separación de Fuentes:
+
+Esta configuración podría ser usada en algoritmos de separación de fuentes basados en Beamforming (formación de haces) o Algoritmos de Dirección de Llegada (DOA), que dependen de la ubicación relativa de las fuentes de sonido y los micrófonos para identificar y separar señales.
+Las diferencias en la posición entre fuentes y micrófonos permitirán que los algoritmos calculen el tiempo de llegada de cada sonido a cada micrófono, un factor clave en la separación espacial del sonido.
+Posibles Aplicaciones:
+
+Este tipo de configuración puede utilizarse para aplicaciones de grabación en 3D, sistemas de conferencias, dispositivos de audición asistida, y en escenarios de investigación donde se requiere la separación de múltiples fuentes de sonido en un entorno ruidoso.
