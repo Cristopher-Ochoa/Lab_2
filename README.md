@@ -1,6 +1,3 @@
-
-
-
 1. Análisis de Componentes Independientes (ICA)
 El Análisis de Componentes Independientes (ICA) es una técnica estadística utilizada para separar una señal multivariable en componentes independientes entre sí. En el contexto de audio, ICA se usa para descomponer las señales capturadas por los micrófonos en varias señales independientes, permitiendo así la separación de las fuentes de sonido.
 
